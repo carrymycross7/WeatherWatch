@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WeatherWatch</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/main.css">
+	
+</head>
+<body>
+	
+		
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="/">Current Forecast</a>
+	  <a href="/detailedlanding">Detailed Forecast</a>
+	  <a href="/fivedaylanding">5-Day Forecast</a>
+	  
+	</div>
+
+	<div id="main">
+	  <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+	
+	 
+	</div>
+	
+		  <h1>
+			 Detailed Forecast
+		</h1>
+	
+	<div class="card text-center d-flex justify-content-center w-50" >
+		<div class='card-header'>
+			<table>
+				<tr>
+					<td><h5 class="card-title float-left"><%=city%>, <%= state%></h5></td>
+				</tr>
+				<tr>
+					<td class='card-title float-left'>Lon: <%=longitude%>, Lat: <%=latitude%></td>
+				</tr>
+			</table>
+		</div>
+			<div class="card-body">
+				<img class='card-img-top weather-image float-left' src='<%=forecastImage%>' alt='Card Image'>
+				<table class='card-text float-left'>
+					<tr>
+						<td><h5 class="card-text text-sm-left"><%=forecastMain %></h5></td>
+					</tr>
+					<tr>
+								<td><h6 class="card-text text-sm-left"><%= forecastDescription%></h6></td>
+					</tr>
+					<tr>
+						<td><h3 class="card-text text-sm-left"><strong><%=forecastTemp %></strong></h3></td>
+					</tr>
+					<tr>
+						<td><h5 class="card-text text-sm-left"><em><%=celciusTemp %></em></h5></td>
+					</tr>
+				</table>	
+						<table class='card-text float-center'>
+							<tr>
+								<td>Humidity: <em><%=humidity %>%</em></td>
+							</tr>
+							<tr>
+								<td><span class='low-temp'><strong>Low:</strong></span> <em><%= lowTemp%></em></td>
+							</tr>
+							<tr>
+								<td><span class='high-temp'><strong>High:</strong></span> <em><%= highTemp%></em></td>
+							</tr>
+							
+						</table>
+				
+						<table class='card-text float-center'>
+							<tr>
+								<td>Feels Like: <em><%=feelsLikeTemp%></em></td>
+							</tr>
+							<tr>
+								<td><strong>Wind Speed :</strong><em><%= windSpeed%>mph</em></td>
+							</tr>
+							
+							
+						</table>
+						<img src='https://maps.aerisapi.com/wYWzJDVZLTSU1JKNBIhLf_wsjpjsg2LubARatvs61atDDOBjbbsCp8K4fqtYzk/flat-dk,water-depth,radar,fradar,radar-est,satellite,ftemperatures,ftemperatures-max-text,states,admin-cities,counties/300x300/<%=city%>,<%= state%>,7/current.png' class='float-center'>
+						
+						<img src='https://maps.aerisapi.com/wYWzJDVZLTSU1JKNBIhLf_wsjpjsg2LubARatvs61atDDOBjbbsCp8K4fqtYzk/flat-dk,water-depth,radar,admin-cities-dk,fradar,states,counties/300x300/<%=city%>,<%= state%> ,7/current.png' class='float-right'>
+				
+					
+					
+						<!-- <a href="" class="btn btn-primary">Go somewhere</a> -->
+			</div>
+	</div>
+	
+	
+
+	
+	
+	
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">			</script>
+	<script type="text/javascript" src='/sidebar.js'></script>
+</body>
+</html>

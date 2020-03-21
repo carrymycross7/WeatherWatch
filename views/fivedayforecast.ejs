@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WeatherWatch</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/main.css">
+	
+</head>
+<body>
+	
+		
+<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="/">Current Forecast</a>
+	  <a href="/detailedlanding">Detailed Forecast</a>
+	  <a href="/fivedaylanding">5-Day Forecast</a>
+	  
+	</div>
+
+<div id="main">
+	  <button class="openbtn" onclick="openNav()">&#9776; Menu</button>	 
+</div>
+	<div class = 'row justify-content-center'>
+		<div class='card'>
+			
+		 <div class='card-header'>
+			<h1> <%=city%>, <%=state%> 5-Day Forecast</h1>	 
+		 </div>
+			
+		
+	
+	<div class = 'row justify-content-center'>
+		<div class='col-sm-2'>
+			<div class="card">
+				<div class='card-header five'>
+					<table>
+						<tr>
+							<td class="card-title float-left"><strong><i class="fas fa-calendar-check"></i> <%=weekDayOne%></strong></td>
+						</tr>
+						<tr>
+							<td class="card-title float-left day"><em><strong><i class="fab fa-cloudversify"></i> <%=currentDay%></strong></em></td>
+						</tr>
+					</table>
+				</div>
+				
+				  <div class="card-body">
+					  <img src="<%=dayOneImg %>" class="card-img-top" alt="...">
+					  <div class = 'card-text'>
+						  	<table>
+								<tbody>
+								    <tr>
+										<p  class='text-center'><span class='low-temp'><strong><i class="fas fa-temperature-low"></i>Low: <%=dayOneTemp%></strong></span></p>
+								    </tr>
+									<tr>
+										<p class='text-center'><span class='high-temp'><strong><i class="fas fa-temperature-high"></i>High: <%=dayOneHigh%></strong></span></p>
+									</tr>
+									<tr>
+										<p  class='text-center'><strong><em><i class="fas fa-thermometer"></i>Humidity: <%=dayOneHumid%>%</em></strong></p>
+									</tr>
+								</tbody>
+							
+					  		</table>
+					  </div>
+					
+				  </div>
+		   </div>
+		</div>
+		<div class='col-sm-2'>
+			<div class="card">
+				<div class='card-header five'>
+					<table>
+						<tr>
+							<td class="card-title float-left"><strong><i class="fas fa-calendar-check"></i> <%=weekDayTwo%></strong></td>
+						</tr>
+						<tr>
+							<td class="card-title float-left day"><em><strong><i class="fab fa-cloudversify"></i> <%=dayTwo%></strong></em></td>
+						</tr>
+					</table>
+				</div>
+				
+				  <div class="card-body">
+					<img src="<%=dayTwoImg %>" class="card-img-top" alt="...">
+					  <div class =  'card-text text-sm-center'>
+						  <table>
+							<tr>
+								<p class='text-center'><span class='low-temp'><strong><i class="fas fa-temperature-low"></i>Low: <%=dayTwoTemp%></strong></span></p>
+							</tr>
+							<tr>
+								<p class='text-center'><span class='high-temp'><strong><i class="fas fa-temperature-high"></i>High: <%=dayTwoHigh%></strong></span></p>
+							</tr>
+							<tr>
+								<p class='text-center'><strong><em><i class="fas fa-thermometer"></i>Humidity: <%=dayTwoHumid%>%</em></strong></p>
+							</tr>
+					  </table>
+					  </div>
+					
+					
+				  </div>
+		   </div>
+		</div>
+		<div class='col-sm-2'>
+			<div class="card">
+				<div class='card-header five'>
+					<table>
+						<tr>
+							<td class="card-title float-left"><strong><i class="fas fa-calendar-check"></i> <%=weekDayThree%></strong></td>
+						</tr>
+						<tr>
+							<td class="card-title float-left day"><em><strong><i class="fab fa-cloudversify"></i> <%=dayThree%></strong></em></td>
+						</tr>
+					</table>
+				</div>
+				
+				  <div class="card-body">
+						<img src="<%=dayThreeImg %>" class="card-img-top" alt="...">
+						<div class='card-text text-sm-center'>
+							<table>
+								<tr>
+									<p class='text-center'><span class='low-temp'><strong><i class="fas fa-temperature-low"></i>Low: <%=dayThreeTemp%></strong></span></p>
+								</tr>
+								<tr>
+									<p class='text-center'><span class='high-temp'><strong><i class="fas fa-temperature-high"></i>High: <%=dayThreeHigh%></strong></span></p>
+								</tr>
+								<tr>
+									<p class='text-center'><strong><em><i class="fas fa-thermometer"></i>Humidity: <%=dayThreeHumid%>%</em></strong></p>
+								</tr>
+						  </table>
+					    </div>					  
+					
+				
+				  </div>
+		   </div>
+		</div>
+		<div class='col-sm-2'>
+			<div class="card">
+				<div class='card-header five'>
+					<table>
+						<tr>
+							<td class="card-title float-left"><strong><i class="fas fa-calendar-check"></i> <%=weekDayFour%></strong></td>
+						</tr>
+						<tr>
+							<td class="card-title float-left day"><em><strong><i class="fab fa-cloudversify"></i> <%=dayFour%></strong></em></td>
+						</tr>
+					</table>
+				</div>
+				
+				  <div class="card-body">
+					<img src="<%=dayFourImg %>" class="card-img-top" alt="...">
+					  <div class='card-text text-sm-center'>
+						   <table>
+							<tr>
+								<p class='text-center'><span class='low-temp'><strong><i class="fas fa-temperature-low"></i>Low: <%=dayFourTemp%></strong></span></p>
+							</tr>
+						  	<tr>
+								<p class='text-center'><span class='high-temp'><strong><i class="fas fa-temperature-high"></i>High: <%=dayFourHigh%></strong></span></p>
+							</tr>
+						    <tr>
+								<p class='text-center'><strong><em><i class="fas fa-thermometer"></i>Humidity: <%=dayFourHumid%>%</em></strong></p>
+							</tr>
+					  </table>
+					  </div>
+					 
+					  
+				  </div>
+		   </div>
+		</div>
+		<div class='col-sm-2'>
+			<div class="card">
+				<div class='card-header five'>
+					<table>
+						<tr>
+							<td class="card-title float-left"><strong><i class="fas fa-calendar-check"></i> <%=weekDayFive%></strong></td>
+						</tr>
+						<tr>
+							<td class="card-title float-left day"><em><strong><i class="fab fa-cloudversify"></i> <%=dayFive%></strong></em></td>
+						</tr>
+					</table>
+				</div>
+				
+				  <div class="card-body">
+			        <img src="<%=dayFiveImg %>" class="card-img-top" alt="...">
+					  <div class='card-text text-sm-center'>
+						  <table>
+							<tr>
+								<p class='text-center'><span class='low-temp'><strong><i class="fas fa-temperature-low"></i>Low: <%=dayFiveTemp%></strong></span></p>
+							</tr>
+							<tr>
+								<p class='text-center'><span class='high-temp'><strong><i class="fas fa-temperature-high"></i>High: <%=dayFiveHigh%></strong></span></p>
+							</tr>
+							<tr>
+								<p class='text-center'><strong><em><i class="fas fa-thermometer"></i>Humidity: <%=dayFiveHumid%>%</em></strong></p>
+							</tr>
+					  </table>
+					  </div>
+					
+					
+				  </div>
+		   </div>
+		</div>
+	</div>
+  </div>		
+</div>
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">			</script>
+	<script type="text/javascript" src='/sidebar.js'></script>
+</body>
+</html>
